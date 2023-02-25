@@ -1,0 +1,393 @@
+:root{
+    --yellow-color: #F7DA84;
+    --light-grey-color: #696B7C;
+    --dark-grey-color: #1E2528;
+    --purple-dark-color: #242337;
+    --white-color: #FEF9EC;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(116.82deg, #0BA689 0%, #ECEFC4 0.01%, #F7DC89 100%);
+}
+
+/* Font-styles */
+h1{
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    font-weight: 500;
+    white-space:nowrap;
+    text-transform: capitalize;
+    color: var(--yellow-color);
+    text-shadow: 0px 0px 3.5px var(--yellow-color);
+}
+h2.l{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--yellow-color);
+}
+.information{
+    color: var(--light-grey-color);
+}
+/* Global containers */
+#global-container{
+    display: flex;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px;
+}
+#main-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    width: 95%;
+    background:
+    url(images/background/bottom-right.svg) no-repeat right bottom,
+    url(images/background/top-left.svg) no-repeat left top, var(--dark-grey-color); 
+    border-radius: 15px;
+}
+#content-container{
+    display:flex;
+    width:44vw;
+    flex-direction: column;
+    gap: 5vh;
+}
+/* Header */
+header.top{
+    display: flex;
+    align-items: center;
+}
+.logo-container{
+    min-width: 116px;
+    max-width: calc(100% - 100px);
+}
+.header-logo{
+    width: 80px;
+    height: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+/* Sections styles */
+
+/* SECTION 1 - Password Length */
+.password-length{
+    display: flex;
+    width: 100%;
+}
+
+/* Password length range */
+.range-contain{
+    display:flex;
+    align-items:center;
+    flex-direction:row-reverse;
+}
+.pass-length-output{
+    display:flex;
+    border-radius: 5px;
+    align-items:center;
+    justify-content:center;
+    width: 40px;
+    height: 30px;
+    border: 2px solid #424357;
+    color: var(--white-color);
+}
+
+/* Range Slider */
+.length-slider {
+    -webkit-appearance: none;
+    margin-right: 1rem;
+    margin-left:1rem;
+    width: 275px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(to left, #FEF9ED, #FDD881);
+    background-size: 38% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+.length-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+    box-shadow: -5px 5px 10px rgba(27, 33, 36, 0.2), 5px -5px 10px rgba(27, 33, 36, 0.2), -5px -5px 10px rgba(33, 41, 44, 0.9), 5px 5px 13px rgba(27, 33, 36, 0.9), inset 1px 1px 2px rgba(33, 41, 44, 0.3), inset -1px -1px 2px rgba(27, 33, 36, 0.5);
+    background-color: #f7da84;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    transition: background .3s ease-in-out;
+}
+  
+.length-slider::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+/* Password length slider END */
+
+.section-title{
+    display: flex;
+    width:100%;
+    align-items: center;
+    gap:1rem;
+}
+.pass-length-contain{
+    display:flex;
+    align-items: center;
+}
+.pass-length-left{
+    display:flex;
+    flex-direction: column;
+}
+.pass-infos-length{
+    display:flex;
+    text-align: left;
+    align-items:center;
+    padding:10px 5px;
+    margin-left: 9.9rem;
+    gap:5px;
+    background-color: var(--purple-dark-color);
+    border-radius: 10px;
+}
+.infos-logo{
+    width: 3.75rem;
+}
+
+/* SECTION 2 - Password Options */
+.password-options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.pass-inputs{
+    display:flex;
+    align-items: center;
+}
+/* Checkboxs*/
+.checkBoxForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:32px;
+}
+.checkbox-container{
+    display:flex;
+}
+.checkbox-input {
+	-webkit-appearance: none;
+	border: 1px solid #424357;
+    background-color: var(--dark-grey-color);
+    width:20px;
+    height:20px;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+    cursor: pointer;
+}
+.checkbox-component{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    margin-right: 4rem;
+}
+.checkbox-input:checked{
+  background-color: var(--yellow-color);
+  border:none;
+}
+.checkbox-input:checked:after {
+    content: '\2714';
+    font-size: 18px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    color: var(--dark-grey-color);
+}
+.checkbox-input:hover{
+    border: 1px solid var(--white-color);
+}
+.checkbox-input:checked:hover{
+    border:none;
+    background-color: var(--white-color);
+}
+/* Checkbox END */
+
+.pass-infos-options{
+    display:flex;
+    text-align: left;
+    align-items:center;
+    padding:10px 5px;
+    gap:5px;
+    background-color: var(--purple-dark-color);
+    border-radius: 10px;
+}
+.password-options label{
+    font-size: 14px;
+    letter-spacing: 5%;
+    color: var(--white-color);
+}
+/* END Password options */
+
+/* SECTION 3 - Password Generator */
+.password-generator{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.generate-btn{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 10px;
+    border:none;
+    font-weight:bold;
+    color: #1E2528;
+    width: 192px;
+    height:44px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #FEFAF0 0%, #FDD77E 100%);
+    box-shadow: -5px 5px 10px rgba(32, 33, 50, 0.2), 5px -5px 10px rgba(32, 33, 50, 0.2), -5px -5px 10px rgba(39, 41, 61, 0.9), 5px 5px 13px rgba(32, 33, 50, 0.9), inset 1px 1px 2px rgba(39, 41, 61, 0.3), inset -1px -1px 2px rgba(32, 33, 50, 0.5);
+}
+.generate-btn:hover{
+    background: var(--white-color);
+}
+.new-password-container{
+    display: flex;
+}
+.new-password{
+    display:flex;
+    align-items: center;
+    border-radius:15px 0 0 15px;
+    background-color: #3D3A49;
+}
+.generated-pass{
+    background:transparent;
+    border:none;
+    color: #FBF3B0;
+    padding:2px 20px;
+}
+/* Copy btn */
+.copy-btn{
+    display:flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 53px;
+    border-radius:0 15px 15px 0;
+    border:none;
+    background: linear-gradient(90deg, #FEFAF0 0%, #FDD77E 100%);
+    box-shadow: -5px 5px 10px rgba(32, 33, 50, 0.2), 5px -5px 10px rgba(32, 33, 50, 0.2), -5px -5px 10px rgba(39, 41, 61, 0.9), 5px 5px 13px rgba(32, 33, 50, 0.9), inset 1px 1px 2px rgba(39, 41, 61, 0.3), inset -1px -1px 2px rgba(32, 33, 50, 0.5);
+}
+.copy-btn:hover{
+    background: var(--white-color);
+}
+
+/* Snackbar quand le mot de passe a bien été copié */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #3D3A49;
+    color:#FDDB89;
+    font-weight: bold;
+    letter-spacing :5%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 7px;
+}
+
+/* class ajoutée en JavaScript pour faire apparaitre la DIV */
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 576px) {
+    body{
+        background:var(--dark-grey-color);
+
+    }
+    header.top{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .logo-container{
+        min-width: 70px;
+        max-width: calc(100% - 100px);
+    }
+    .header-logo{
+        width: 58px;
+        height: 100%;
+    }
+    h1{
+        margin: 0;
+    }
+
+    #global-container{
+        background:
+        url(images/background/bottom-right.svg) no-repeat right bottom,
+        url(images/background/top-left.svg) no-repeat left top, 
+        var(--dark-grey-color); 
+        height:100%;
+    }
+
+    #content-container{
+        padding: 20px 0px;
+        width:85vw;
+        height:100vh;
+
+    }
+    #main-wrapper{
+        background:none;
+        padding: 0 15px;
+        height: 100%;
+
+    }
+    .pass-length-contain {
+        align-items: flex-start;
+        flex-direction:column;
+    }
+    .length-slider{
+        width: 71.1vw;
+    }
+    .pass-infos-length{
+        margin:0;
+        margin-top:25px;
+    }
+    .checkbox-container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* RESPONSIVE Tablet */
+@media (min-width:576px) and (max-width:1024px) {
+    #global-container{
+        height: 100%;
+    }
+    #main-wrapper{
+        width: auto;
+        height:80%
+    }
+    #content-container{
+        padding:25px;
+        width: auto;
+    }
+    .pass-infos-length{
+        margin:0;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <!--Global Container -->
+    <div id="global-container">
+        <div id="main-wrapper">
+            <div id="content-container">
+                <header class="top">
+                    <div class="logo-container">                    
+                        <svg class="header-logo" viewBox="0 0 87 60">
+                            <path fill="#F7DA84" d="M31.73 22.57a2.708 2.708 0 0 0-2.957-.592c-.33.137-.629.338-.88.591l-3.502 3.523-3.501-3.522a2.708 2.708 0 0 0-3.838 0 2.732 2.732 0 0 0 0 3.854l3.507 3.516-3.507 3.517a2.732 2.732 0 0 0 0 3.854 2.708 2.708 0 0 0 3.838 0l3.501-3.522 3.502 3.522a2.708 2.708 0 0 0 3.837 0 2.731 2.731 0 0 0 0-3.854l-3.507-3.517 3.507-3.516a2.724 2.724 0 0 0 .59-2.97 2.724 2.724 0 0 0-.59-.884Zm17.843 0a2.708 2.708 0 0 1 3.838 0 2.731 2.731 0 0 1 0 3.854l-3.507 3.516 3.507 3.517a2.731 2.731 0 0 1 0 3.854 2.708 2.708 0 0 1-3.838 0l-3.501-3.522-3.502 3.522a2.708 2.708 0 0 1-3.837 0 2.731 2.731 0 0 1 0-3.854l3.507-3.517-3.507-3.516a2.731 2.731 0 0 1 0-3.854 2.708 2.708 0 0 1 3.838 0l3.5 3.522 3.502-3.522Zm12.76 10.092c-.72 0-1.408.287-1.917.797a2.728 2.728 0 0 0 0 3.85c.509.51 1.198.797 1.917.797h10.84c.719 0 1.408-.287 1.916-.797a2.728 2.728 0 0 0 0-3.85 2.705 2.705 0 0 0-1.916-.797h-10.84ZM14.906 0a14.873 14.873 0 0 0-10.54 4.385A15.003 15.003 0 0 0 0 14.97v29.94c0 3.97 1.57 7.778 4.366 10.586a14.873 14.873 0 0 0 10.54 4.384h56.912c3.953 0 7.745-1.577 10.54-4.384a15.003 15.003 0 0 0 4.366-10.586V14.97a15 15 0 0 0-4.366-10.585A14.873 14.873 0 0 0 71.818 0H14.906ZM5.42 14.97c0-5.258 4.25-9.526 9.486-9.526h56.912c5.236 0 9.485 4.268 9.485 9.526v29.94c0 2.527-.999 4.95-2.778 6.737a9.464 9.464 0 0 1-6.707 2.79H14.906a9.465 9.465 0 0 1-6.708-2.79A9.547 9.547 0 0 1 5.42 44.91V14.97Z"/>
+                        </svg>
+                    </div>
+                    <h1>password generator</h1>
+                </header>
+                <main>
+                    <!--SECTION 1 - Password Length -->
+                    <section class="password-length">
+                        <div class="pass-length-left">
+                            <div class="section-title">
+                                <svg class="ruler-logo" width="36" height="16" viewBox="0 0 36 16">
+                                    <path fill="#F7DA84" d="M34 0h-3v5.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V0h-4v5.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V0h-4v5.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V0h-4v5.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V0H7v5.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5V0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h32a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
+                                </svg>
+                                <h2 class="l">Password length</h2>
+                            </div>
+                            <div class="pass-length-contain">
+                                <div class="range-contain">
+                                    <input type="range" min="1" max="32" value="12" class="length-slider" id="characterAmountRange" >
+                                    <output  min="1" max="32" value="12" id="characterAmountNumber" class="pass-length-output">12</output>
+                                </div>
+                                <div class="pass-infos-length">
+                                    <svg class="infos-logo" width="25" height="25" viewBox="0 0 25 26">
+                                        <path fill="#696B7C" d="M12.5.462C5.597.462 0 6.06 0 12.962c0 6.905 5.597 12.5 12.5 12.5S25 19.867 25 12.962C25 6.06 19.403.461 12.5.461Zm0 5.544a2.117 2.117 0 1 1 0 4.234 2.117 2.117 0 0 1 0-4.234Zm2.823 12.802a.605.605 0 0 1-.605.605h-4.436a.605.605 0 0 1-.605-.605v-1.21c0-.333.271-.604.605-.604h.605v-3.226h-.605a.605.605 0 0 1-.605-.605v-1.21c0-.333.271-.604.605-.604h3.226c.334 0 .605.27.605.604v5.04h.605c.334 0 .605.272.605.606v1.21Z"/>
+                                    </svg>
+                                    <p class="information">In France, ANSSI recommends a minimum length of 12 characters</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!--SECTION 2- Password options -->
+                    <section class="password-options">
+                        <div class="section-title">
+                            <svg class="tools-logo" width="26" height="26" viewBox="0 0 26 26">
+                                <path fill="#F7DA84" d="M25.448 20.092 19.5 14.146a3.77 3.77 0 0 0-4.336-.706L9.752 8.029V4.875L3.252 0 .002 3.25l4.875 6.5h3.154l5.413 5.412c-.691 1.411-.468 3.163.705 4.336l5.947 5.946c.74.741 1.94.741 2.676 0l2.676-2.676a1.897 1.897 0 0 0 0-2.676Zm-8.602-8.667c1.437 0 2.788.558 3.803 1.574l.985.985a7.188 7.188 0 0 0 2.224-1.498 7.302 7.302 0 0 0 1.925-6.941.608.608 0 0 0-1.02-.28l-3.779 3.778-3.448-.574-.574-3.447 3.778-3.778a.613.613 0 0 0-.289-1.026 7.315 7.315 0 0 0-6.936 1.925c-1.447 1.447-2.128 3.356-2.092 5.26l4.168 4.169a5.53 5.53 0 0 1 1.255-.147Zm-5.276 4.163L8.69 12.71.953 20.453a3.249 3.249 0 1 0 4.595 4.595l6.277-6.276c-.386-1.01-.503-2.112-.254-3.184Zm-8.318 8.378c-.67 0-1.218-.548-1.218-1.218 0-.675.543-1.219 1.218-1.219a1.219 1.219 0 0 1 0 2.437Z"/>
+                            </svg>                    
+                            <h2 class="l">Password options</h2>
+                        </div>
+                        <div class="pass-inputs">
+                            <form id="passwordGeneratorForm" class="checkBoxForm">
+                                <div class="checkbox-container">
+                                    <div class="checkbox-component">
+                                        <input type="checkbox" name="numbers" id="includeNumbers" class="checkbox-input">
+                                        <label for="includeNumbers">numbers</label>
+                                    </div>
+                                    <div class="checkbox-component">
+                                        <input type="checkbox" name="lowercase" id="includeLowercase" class="checkbox-input" >
+                                        <label for="includeLowercase">lowercase</label>
+                                    </div>
+                                    <div class="checkbox-component">
+                                        <input type="checkbox" name="uppercase" id="includeUppercase" class="checkbox-input" >
+                                        <label for="includeUppercase">uppercase</label>
+                                    </div>
+                                    <div class="checkbox-component">
+                                        <input type="checkbox" name="special-characters" id="includeSymbols" class="checkbox-input" >
+                                        <label for="includeSymbols">special characters</label>
+                                    </div>
+                                </div>
+                                <div class="pass-infos-options">
+                                    <svg class="infos-logo" width="25" height="25" viewBox="0 0 25 26">
+                                        <path fill="#696B7C" d="M12.5.462C5.597.462 0 6.06 0 12.962c0 6.905 5.597 12.5 12.5 12.5S25 19.867 25 12.962C25 6.06 19.403.461 12.5.461Zm0 5.544a2.117 2.117 0 1 1 0 4.234 2.117 2.117 0 0 1 0-4.234Zm2.823 12.802a.605.605 0 0 1-.605.605h-4.436a.605.605 0 0 1-.605-.605v-1.21c0-.333.271-.604.605-.604h.605v-3.226h-.605a.605.605 0 0 1-.605-.605v-1.21c0-.333.271-.604.605-.604h3.226c.334 0 .605.27.605.604v5.04h.605c.334 0 .605.272.605.606v1.21Z"/>
+                                    </svg>
+                                    <p class="information">In France, ANSSI recommends a password including upper and lower case letters, numbers and special characters</p>
+                                </div>
+                                <button type="submit" class="generate-btn" id="generate-btn">Generate password</button>
+                            </form>
+                        </div>
+                    </section>
+                    <!--SECTION 3 - Password Generator -->
+                    <section class="password-generator">
+
+                        <div class="new-password-container">
+                           <div class="new-password">
+                                <output class="generated-pass" id="passwordDisplay" name="new-password">new password here</output>
+                           </div>
+                            <button id="copy" class="copy-btn">
+                                <svg  width="22" height="25.14" viewBox="0 0 23 26">
+                                    <path fill="#1E2528" d="M16.02 22.664v1.964c0 .651-.528 1.179-1.178 1.179H1.485c-.65 0-1.178-.528-1.178-1.179V6.558c0-.65.527-1.178 1.178-1.178h3.536v14.534a2.753 2.753 0 0 0 2.75 2.75h8.249Zm0-16.892V.666H7.77c-.65 0-1.178.527-1.178 1.178v18.07a1.18 1.18 0 0 0 1.179 1.179h13.356c.65 0 1.178-.528 1.178-1.179V6.951h-5.107c-.648 0-1.178-.53-1.178-1.179Zm5.94-1.523L18.722 1.01a1.179 1.179 0 0 0-.833-.345h-.298V5.38h4.714v-.298c0-.313-.124-.612-.345-.833Z"/>
+                                </svg>
+
+                            </button>
+
+
+                        </div>
+                        <div id="snackbar"><span id="copyStatusText"></span></div>
+                    </section>
+
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
